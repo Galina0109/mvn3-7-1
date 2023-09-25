@@ -19,13 +19,13 @@ public class StatisticsServiceTest {
     }
 
     @Test
-    void findMin() {
+    void findMaxFromMiddle() {
         StatisticsService service = new StatisticsService();
 
-        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
-        long expected = 3;
+        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 60, 11, 11, 12};
+        long expected = 60;
 
-        long actual = service.findMin(incomesInBillions) ;
+        long actual = service.findMax(incomesInBillions);
 
         Assertions.assertEquals(expected, actual);
     }
